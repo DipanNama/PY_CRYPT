@@ -1,0 +1,1 @@
+{"name":"pycrypt-substitution-lab","version":"1.0.0","private":true,"scripts":{"test":"python3 -m unittest test_codec.py && node --test test.cjs","build":"node build.cjs"}}

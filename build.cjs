@@ -1,0 +1,1 @@
+const f=require('node:fs');f.rmSync('dist',{recursive:true,force:true});f.cpSync('site','dist',{recursive:true});f.writeFileSync('dist/.nojekyll','');console.log('Built educational substitution lab');
