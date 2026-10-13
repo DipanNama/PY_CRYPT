@@ -1,0 +1,65 @@
+<!doctype html><html lang="en" class="dark"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><meta name="description" content="Explore a toy character substitution alphabet. Educational only, not secure encryption. Never enter secrets."><title>PY_CRYPT - Substitution Lab</title><link rel="stylesheet" href="style.css"></head><body><main><header><div class="brand">PY_CRYPT <span>by Dipan Nama</span></div><button id="theme" aria-label="Switch color theme"><span class="tile"><!-- @license lucide-static v1.54.0 - ISC -->
+<svg class="icon"
+  class="lucide lucide-moon"
+  xmlns="http://www.w3.org/2000/svg"
+  width="24"
+  height="24"
+  viewBox="0 0 24 24"
+  fill="none"
+  stroke="currentColor"
+  stroke-width="2"
+  stroke-linecap="round"
+  stroke-linejoin="round"
+>
+  <path d="M20.985 12.486a9 9 0 1 1-9.473-9.472c.405-.022.617.46.402.803a6 6 0 0 0 8.268 8.268c.344-.215.825-.004.803.401" />
+</svg>
+</span></button></header><section class="intro"><span class="pill">A toy code, not a cipher for secrets</span><h1>Different symbols. Same message.</h1><p>Explore an old substitution exercise, one character at a time.</p></section><section class="layout"><div class="frame"><form id="form" class="inner"><h2>Try a public example.</h2><div class="buttons" role="group" aria-label="Operation"><button type="button" id="encode" aria-pressed="true">Encode</button><button type="button" id="decode" aria-pressed="false">Decode</button></div><label for="input" id="label">Plain text</label><textarea id="input" maxlength="50000" rows="5" spellcheck="false">Hello world!</textarea><button class="primary" type="submit" id="run">Encode message <span class="tile"><!-- @license lucide-static v1.54.0 - ISC -->
+<svg class="icon"
+  class="lucide lucide-arrow-up-right"
+  xmlns="http://www.w3.org/2000/svg"
+  width="24"
+  height="24"
+  viewBox="0 0 24 24"
+  fill="none"
+  stroke="currentColor"
+  stroke-width="2"
+  stroke-linecap="round"
+  stroke-linejoin="round"
+>
+  <path d="M7 7h10v10" />
+  <path d="M7 17 17 7" />
+</svg>
+</span></button><button class="secondary" type="button" id="example">Load example</button><p class="hint">Educational only. Anyone with this public alphabet can reverse the code. Never enter passwords, keys or private data.</p><p class="hint">ASCII letters, digits, the original punctuation, spaces, tabs and line breaks. Max 1,000 characters.</p><div id="notice" class="notice" role="status" aria-live="polite"></div></form></div><div><div class="result-head"><h2 id="result-title">Token envelope</h2><span class="badge" id="status">Loading alphabet</span></div><div class="buttons"><button id="copy">Copy result <span class="tile"><!-- @license lucide-static v1.54.0 - ISC -->
+<svg class="icon"
+  class="lucide lucide-copy"
+  xmlns="http://www.w3.org/2000/svg"
+  width="24"
+  height="24"
+  viewBox="0 0 24 24"
+  fill="none"
+  stroke="currentColor"
+  stroke-width="2"
+  stroke-linecap="round"
+  stroke-linejoin="round"
+>
+  <rect width="14" height="14" x="8" y="8" rx="2" ry="2" />
+  <path d="M4 16c-1.1 0-2-.9-2-2V4c0-1.1.9-2 2-2h10c1.1 0 2 .9 2 2" />
+</svg>
+</span></button><button id="export">Export result <span class="tile"><!-- @license lucide-static v1.54.0 - ISC -->
+<svg class="icon"
+  class="lucide lucide-download"
+  xmlns="http://www.w3.org/2000/svg"
+  width="24"
+  height="24"
+  viewBox="0 0 24 24"
+  fill="none"
+  stroke="currentColor"
+  stroke-width="2"
+  stroke-linecap="round"
+  stroke-linejoin="round"
+>
+  <path d="M12 15V3" />
+  <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4" />
+  <path d="m7 10 5 5 5-5" />
+</svg>
+</span></button></div><div class="response"><pre id="output">Your result will appear here.</pre></div><div class="trace-head"><h2>Character trace</h2><span class="badge" id="count">0 characters</span></div><div id="trace" class="records"></div><button id="more" hidden>Show more characters</button></div></section><section class="notes"><div><strong>Substitution, not encryption</strong><p>Every repeated letter has the same token. There is no secret key, randomness or protection against tampering.</p></div><div><strong>Whitespace, kept intact</strong><p>A versioned JSON envelope avoids the old space-delimiter ambiguity. Spaces, tabs and line breaks survive a round trip.</p></div><div><strong>Local and inspectable</strong><p>Your message stays in this tab. Nothing is saved except theme. The original alphabet and a tested Python CLI are in the repo.</p></div></section><div class="divider"></div><footer><span>Built by Dipan Nama. Educational use only.</span><a href="https://github.com/DipanNama/PY_CRYPT" target="_blank" rel="noopener noreferrer">Source & Python CLI</a></footer></main><script src="codec.js"></script><script src="app.js"></script></body></html>
